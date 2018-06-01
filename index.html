@@ -7,15 +7,21 @@
         <script src= "jquery-3.3.1.min.js"> </script>
         <script src= "info.js"></script>
         <script src="eventhandler.js"></script> 
+        <script src = "singlepage.js"></script>
     </head>
     
     <body id = "top-page" class = "edge">
-        
-        <form action ="/singelpage.js" method="post" class = "ajax" id="LoginForm">
-            <input type="text", name="firstname", placeholder="brugernavn">
-            <input type="password", name="firstname", placeholder="password">
-            <input type="submit" value="Login">
+        <div id="maincontainer">
+       
+        <form name="myForm" method="get" class = "ajax" id="LoginForm">
+            <input type="text", id="bruger", placeholder="brugernavn">
+            <input type="password", id="pass", placeholder="password">
+            
         </form>
+        <button id="login" type="button" > login </button>
+        <button id="getLogin" type="button"> Make Rqeust </button>
+            <p id = "demo"> hey hey hey </p>
+         </div>
     
 <!--
     <body id = "top-page" class = "edge">

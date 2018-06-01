@@ -1,8 +1,8 @@
 $(function(){
-    $('#LoginForm').on('submit',function(){
+    $('#1LoginForm').on('submit',function(){
     var formData = JSON.stringify($("#LoginForm").serializeArray());
 	var that = $(this), 
-		url = that.attr('action')
+		//url = that.attr('action')
 		type = that.attr('method'),   
 		data = {};
         
@@ -17,13 +17,17 @@ $(function(){
 	console.log(data)
         
 	$.ajax({
-		url: url,
+		//url: url,
 		type: type,
 		data: JSON.stringify(data),
         contentType: "application/JSON",
 		success: function(response){
+            
             console.log(response);
         },
+        error: function(){
+            //Show errormessage
+        }
 	});
 	return false;
 });

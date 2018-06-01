@@ -1,6 +1,7 @@
+ let yes;
 $(function() {
-  var httpRequest;
-  document.getElementById("ajaxButton").addEventListener('click', makeRequest);
+  let httpRequest;
+  $("#getLogin").on('click', makeRequest)
   function makeRequest() {
     httpRequest = new XMLHttpRequest();
     if (!httpRequest) {
@@ -15,10 +16,33 @@ $(function() {
   function alertContents() {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
-        alert(httpRequest.responseText);
+          alert(this.responseText)
+            
+        yes = JSON.parse(this.responseText);
+        document.getElementById("demo").innerHTML = yes[0].id
+                    
       } else {
         alert('There was a problem with the request.');
       }
     }
   }
+    
+    $(function(){
+    
+    $('#login').on('click',function(){
+        if(document.getElementById("bruger").value ==yes[0].id){
+            if(document.getElementById("pass").value== yes[0].id){
+                $('#maincontainer').load("mainPage.html")
+            }else{
+              alert("invalid info")
+
+            }
+        }else{
+              alert("invalid info")
+        }
+     $
+})
+});
 })();
+
+
