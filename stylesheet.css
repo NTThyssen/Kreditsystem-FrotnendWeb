@@ -48,6 +48,7 @@ form {
   padding: 1em;
   border: 1px solid #CCC;
   border-radius: 1em;
+  font-size: larger;  
 }
 
 form div + div {
@@ -74,4 +75,59 @@ label {
     height: 400px;
     position: absolute;
     float: left;
+}
+#leftMainPage{
+    width: 150px;
+    float: left;
+
+}
+.mainButton{
+    width: 140px;
+    color: white;
+    background-color: #4cAF50;
+    border: none;
+    display: inline-block;
+    border-radius: 50px;
+    font-size: medium;
+}
+.mainButton:hover{
+    width: 140px;
+    color: white;
+    background-color: #006400;
+    border: none;
+    display: inline-block;
+    border-radius: 50px;
+}
+.mainButton:active{
+    background-color: #00aa00;
+}
+.inputFelt{
+    border-radius: 50px;
+    background-color: #dddddd;
+    border: none;
+}
+.inputFeltudløb{
+    width: 25px;
+    border-radius: 50px;
+    background-color: #dddddd;
+    border: none;
+}
+.inputFeltCVS{
+    width: 40px;
+    border-radius: 50px;
+    background-color: #dddddd;
+    border: none;
+}
+#forDiv{
+    /* Just to center the form on the page */
+    margin: 0 auto;
+    width: 400px;
+    /* To see the outline of the form */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;
+    font-size: large;
+}
+td{
+    width: 200px;
 }
