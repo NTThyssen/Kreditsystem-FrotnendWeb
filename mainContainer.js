@@ -21,4 +21,9 @@ $(function () {
         document.getElementById("topTitle").innerText = "Mine Oplysninger";
     })
 });
-
+$(function () {
+    $("#historik").on("click",function () {
+        $("#rightMainPage").load("historik.html");
+        document.getElementById("topTitle").innerText = "Historik";
+    })
+})
