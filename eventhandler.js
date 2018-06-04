@@ -20,17 +20,7 @@ $(function() {
             
         yes = JSON.parse(this.responseText);
         document.getElementById("demo").innerHTML = yes[0].id
-                    
-      } else {
-        alert('There was a problem with the request.');
-      }
-    }
-  }
-    
-    $(function(){
-    
-    $('#login').on('click',function(){
-        if(document.getElementById("bruger").value ==yes[0].id){
+          if(document.getElementById("bruger").value ==yes[0].id){
             if(document.getElementById("pass").value== yes[0].id){
                 $('#maincontainer').load("mainPage.html")
             }else{
@@ -40,9 +30,13 @@ $(function() {
         }else{
               alert("invalid info")
         }
-     $
-})
-});
+                    
+      } else {
+        alert('There was a problem with the request.');
+      }
+    }
+  }
+    
 })();
 
 
