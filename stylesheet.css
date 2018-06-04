@@ -1,7 +1,7 @@
 form {
   /* Just to center the form on the page */
   margin: 0 auto;
-  width: 400px;
+  width: 150px;
   /* To see the outline of the form */
   padding: 1em;
   border: 1px solid #CCC;
@@ -57,3 +57,30 @@ label {
     border-radius: 1em;
     font-size: large;
 }
+.inputFelt{
+    border-radius: 50px;
+    background-color: #dddddd;
+    border: none;
+}
+.inputFeltudløb{
+    width: 25px;
+    border-radius: 50px;
+    background-color: #dddddd;
+    border: none;
+}
+.inputFeltCVS{
+    width: 40px;
+    border-radius: 50px;
+    background-color: #dddddd;
+    border: none;
+}
+#getLogin{
+    margin: 0 auto;
+    width: 150px;
+}
+.LoginButton{
+    margin: 0 auto;
+    width: 150px;
+}
+
+
