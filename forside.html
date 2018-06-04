@@ -3,13 +3,14 @@
 <head>
     <title>Velkommen</title>
     <link href="stylesheet.css" rel="stylesheet">
+    <script src="hentData.js"></script>
 </head>
-<body>
+<body onload="hentNavn()">
     <div id="forDiv">
         <table>
             <tr>
                 <td>Navn</td>
-                <td>Mathias Høgsgaard</td>
+                <td id="brugerNavn"></td>
             </tr>
             <tr>
                 <td>Beløb</td>

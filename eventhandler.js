@@ -16,7 +16,6 @@ $(function() {
   function alertContents() {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
       if (httpRequest.status === 200) {
-          alert(this.responseText)
             
         yes = JSON.parse(this.responseText);
           if(document.getElementById("bruger").value ==yes[0].id){
@@ -35,7 +34,6 @@ $(function() {
       }
     }
   }
-    
 })();
 
 
