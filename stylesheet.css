@@ -8,6 +8,9 @@ form {
   border-radius: 1em;
   font-size: larger;  
 }
+.loginInput{
+    width: 150px;
+}
 
 form div + div {
   margin-top: 1em;
