@@ -3,9 +3,9 @@
 <head>
     <title>Velkommen</title>
     <link href="stylesheet.css" rel="stylesheet">
-    <script src="hentData.js"></script>
+    <script src="hentForsideData.js"></script>
 </head>
-<body onload="hentNavn()">
+<body onload="hentForsideData()">
     <div id="forDiv">
         <table>
             <tr>
@@ -14,15 +14,15 @@
             </tr>
             <tr>
                 <td>Beløb</td>
-                <td>500  kr.</td>
+                <td id="brugerSaldo"></td>
             </tr>
             <tr>
                 <td>Sidsre ordre</td>
-                <td>Herre klip</td>
+                <td id="sidsteOrdre"></td>
             </tr>
             <tr>
                 <td>Beløb for sidste ordre</td>
-                <td>10.000 kr.</td>
+                <td id="beløbSidsteOrdre"></td>
             </tr>
         </table>
     </div>

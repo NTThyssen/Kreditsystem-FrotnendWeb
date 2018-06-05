@@ -109,13 +109,11 @@ label {
 .table-container table {
     width: 100%;
 }
-
 .scroll-container{
     border-top:1px solid #ccc;
     max-height: 500px;
     overflow-y: scroll;
 }
-
 .scroll-container td{
     border-bottom: 1px solid #ccc;
     border-right: 1px solid #ccc;
