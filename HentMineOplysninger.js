@@ -3,7 +3,6 @@ $(function hentMineOplysningerData() {
     function makeRequest() {
 
     }
-
         let yes;
         let httpRequest;
 
@@ -14,7 +13,6 @@ $(function hentMineOplysningerData() {
         let oplysBy;
         let oplysTlf;
         let oplysEmail
-
 
         httpRequest = new XMLHttpRequest();
         if (!httpRequest) {
