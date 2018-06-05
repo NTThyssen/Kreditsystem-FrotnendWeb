@@ -18,9 +18,9 @@ $(function hentForsideData() {
 
                 yes = JSON.parse(this.responseText);
                 document.getElementById("brugerNavn").innerHTML = yes[1].firstname + " " + yes[1].lastname;
-                document.getElementById("brugerSaldo").innerHTML = yes[1].account[1].balance + "kr.";
+                document.getElementById("brugerSaldo").innerHTML = yes[1].account.balance + "kr.";
                 document.getElementById("sidsteOrdre").innerHTML = "";
-                document.getElementById("beløbSidsteOrdre").innerHTML = "test";
+                document.getElementById("beløbSidsteOrdre").innerHTML = "";
             } else {
                 alert('There was a problem with the request.');
             }
