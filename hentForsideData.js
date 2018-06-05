@@ -20,7 +20,7 @@ $(function hentForsideData() {
                 document.getElementById("brugerNavn").innerHTML = yes[1].firstname + " " + yes[1].lastname;
                 document.getElementById("brugerSaldo").innerHTML = yes[1].account[1].balance + "kr.";
                 document.getElementById("sidsteOrdre").innerHTML = "";
-                document.getElementById("beløbSidsteOrdre").innerHTML = "";
+                document.getElementById("beløbSidsteOrdre").innerHTML = "test";
             } else {
                 alert('There was a problem with the request.');
             }
