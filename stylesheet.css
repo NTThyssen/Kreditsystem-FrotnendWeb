@@ -86,4 +86,37 @@ label {
     width: 150px;
 }
 
+/*historik*/
+.histoTr{
+    height: 50px;
+    padding:0;
+}
+.histoTd{
+    padding:2px;
+}
+.table-container {
+    border:1px solid #ccc;
+    /*border-radius: 3px;*/
+    width:500px;
+    /* Just to center the form on the page */
+    margin: 0 auto;
+    /*width: 150px;*/
+    /* To see the outline of the form */
+    padding: 1em;
+    border-radius: 1em;
+    font-size: larger;
+}
+.table-container table {
+    width: 100%;
+}
 
+.scroll-container{
+    border-top:1px solid #ccc;
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+.scroll-container td{
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
