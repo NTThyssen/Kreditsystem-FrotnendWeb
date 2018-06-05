@@ -1,4 +1,3 @@
-
 $(function fillTable(){
     let table = document.getElementById("myTable");
     let testEntry = '[{"date" : "2018-05-06", "id" : "1234", "company" : "sejtFirma", "total" : "100"}, {"date" : "2018-05-05", "id" : "1235", "company" : "AndetFirma", "total" : "200"}]';
@@ -23,10 +22,9 @@ $(function fillTable(){
         cells[i].onclick = function(){reactToClick(this.id)};
     }
 })();
-
 function reactToClick(id){
     let row = id.charAt(1);
     $("#rightMainPage").load("Ordre.html");
     document.getElementById("topTitle").innerText = "Ordredetaljer";
-    //alert(inputData[row].id);
+    let orderId = inputData[row].id;
 }
