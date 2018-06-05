@@ -2,17 +2,19 @@
 <html>
 	<head>
 		<title>Historik</title>
+		<script src="HistoScripts.js"></script>
 	</head>
-	<body>
+	<body onload="fillTable()">
 		<table class="table-container">
 			<tbody>
 				<tr class="histoTr">
 					<th>Dato</th>
-					<th>Service</th>
+					<th>ID</th>
+					<th>Firma</th>
 					<th>Pris</th>
 				</tr>
 				<tr class="histoTr">
-					<td class="histoTd" colspan="3">
+					<td class="histoTd" colspan="4">
 						<div class="scroll-container">
 							<table id="myTable">
 							</table>
@@ -21,54 +23,6 @@
 				</tr>
 			</tbody>
 		</table>
-		<script type="text/javascript">
-			var testData = [
-						['2018-01-25', 'herreklipning', '200kr'],
-						["2018-02-21", "børneklipning", "100kr"],
-						['2018-01-25', 'herreklipning', '200kr'],
-						["2018-02-21", "børneklipning", "100kr"],
-						['2018-01-25', 'herreklipning', '200kr'],
-						["2018-02-21", "børneklipning", "100kr"],
-						['2018-01-25', 'herreklipning', '200kr'],
-						["2018-02-21", "børneklipning", "100kr"],
-						['2018-01-25', 'herreklipning', '200kr'],
-						["2018-02-21", "børneklipning", "100kr"],
-						['2018-01-25', 'herreklipning', '200kr'],
-						["2018-02-21", "børneklipning", "100kr"],
-						['2018-01-25', 'herreklipning', '200kr'],
-						["2018-02-21", "børneklipning", "100kr"],
-						['2018-01-25', 'herreklipning', '200kr'],
-						["2018-02-21", "børneklipning", "100kr"],
-						['2018-01-25', 'herreklipning', '200kr'],
-						["2018-02-21", "børneklipning", "100kr"],
-						['2018-01-25', 'herreklipning', '200kr'],
-						["2018-02-21", "børneklipning", "100kr"],
-						['2018-01-25', 'herreklipning', '200kr'],
-						["2018-02-21", "børneklipning", "100kr"],
-						['2018-01-25', 'herreklipning', '200kr'],
-						["2018-02-21", "børneklipning", "100kr"],
-						['2018-01-25', 'herreklipning', '200kr'],
-						["2018-02-21", "børneklipning", "100kr"],
-						['2018-01-25', 'herreklipning', '200kr'],
-						["2018-02-21", "børneklipning", "100kr"],
-						['2018-01-25', 'herreklipning', '200kr'],
-						["2018-02-21", "børneklipning", "100kr"],
-						['2018-01-25', 'herreklipning', '200kr'],
-						["2018-02-21", "børneklipning", "100kr"],
-						["2018-02-21", "dameklipning", "450kr"]
-					]
-			
-			function fillTable(inputData){
-						var table = document.getElementById("myTable");
-						for(var i = 0; i < inputData.length; i++){
-							var row = table.insertRow();
-							for(var j = 0; j < inputData [i].length; j++){
-								var cell = row.insertCell();
-								cell.innerHTML = inputData[i][j];
-							}
-						}
-					}
-					fillTable(testData);
-		</script>
+
 	</body>
 </html>
