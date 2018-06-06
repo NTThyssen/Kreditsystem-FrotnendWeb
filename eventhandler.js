@@ -1,5 +1,6 @@
- let yes;
+ 
 $(function() {
+  let yes;
   let httpRequest;
   $("#getLogin").on('click', makeRequest)
   function makeRequest() {
@@ -20,8 +21,8 @@ $(function() {
         yes = JSON.parse(this.responseText);
           if(document.getElementById("bruger").value ==yes[0].id){
             if(document.getElementById("pass").value== yes[0].id){
-                //alert(this.responseText);
                 $("#maincontainer").load("mainPage.html")
+                alert(this.responseText)
             }else{
               alert("invalid info")
 
@@ -35,6 +36,6 @@ $(function() {
       }
     }
   }
-})();
+});
 
 

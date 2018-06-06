@@ -2,33 +2,29 @@
 <html>
 <head>
     <title>Profilindstillinger</title>
-    <script src="HentMineOplysninger.js"></script>
 </head>
-<body onload="hentMineOplysningerData()">
-    <div class="mineOplysningerDiv">
+<body>
+    <div>
     <form>
-        Fornavn:<br>
-        <input id="oplysFirstNavn" class="inputFelt" type="text" name="name" placeholder=""><br>
-        Efternavn:<br>
-        <input id="oplysLastNavn" class="inputFelt" type="text" name="name" placeholder=""><br>
+        Navn:<br>
+        <input class="inputFelt" type="text" name="name"><br>
         Addresse:<br>
-        <input id="oplysAdrasse" class="inputFelt" type="text" name="Address"><br>
+        <input class="inputFelt" type="text" name="Address"><br>
         Postnummer:<br>
-        <input id="oplysPostnummer" class="inputFelt" type="text" name="Postnummer"><br>
+        <input class="inputFelt" type="text" name="Postnummer"><br>
         By:<br>
-        <input id="oplysBy" class="inputFelt" type="text" name="By" readonly="true"><br>
+        <input class="inputFelt" type="text" name="By" readonly="true"><br>
         Tlf.:<br>
-        <input id="oplysTlf" class="inputFelt" type="text" name="tlf"><br>
+        <input class="inputFelt" type="text" name="tlf"><br>
         E-mail:<br>
-        <input id="oplysEmail" class="inputFelt" type="text" name="email"><br>
+        <input class="inputFelt" type="text" name="email"><br>
         Password:<br>
-        <input class="inputFelt" type="password" name="oldpassword" placeholder="Nuværende password"><br>
+        <input class="inputFelt" type="password" name="oldpassword"><br>
         Nyt password:<br>
-        <input class="inputFelt" type="password" name="newpassword" placeholder="Indtast nyt password"><br>
+        <input class="inputFelt" type="password" name="newpassword"><br>
+        <br>
+        <input class="mainButton" type="submit" value="Gem ændringer"><br>
     </form>
-        <div id="mineOpBut">
-            <button class="mainButton" type="button">Gem ændringer</button>
-        </di>
     </div>
 </body>
 </html>
