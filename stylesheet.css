@@ -130,6 +130,7 @@ td{
 #rightMainPage {
     display: flex;
     padding: 0 16px;
+    padding-right: 150px;
 }
 
 #orderContainer table {
