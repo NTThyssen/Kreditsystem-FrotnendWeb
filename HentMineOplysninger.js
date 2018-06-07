@@ -32,21 +32,22 @@ $(function hentMineOplysningerData() {
 
                     oplysFirstNavn = localStorage.getItem("firstname");
                     oplysLastName = localStorage.getItem("lastname");
-                    /*
-                    oplysAdrasse = yes[0].adresse; //Skal rettes
-                    oplysPostNummer = yes[0].postnummer; //Skal rettes
-                    oplysBy = yes[0].by; //Skal rettes
-                    oplysTlf = yes[0].nummer; //Skal rettes
-                    oplysEmail = yes[0].Email; //Skal rettes
-                    */
+                    oplysAdrasse = localStorage.getItem("adrasse");
+                    oplysTlf = localStorage.getItem("phonenumber");
+                    oplysEmail = localStorage.getItem("mail");
+                    /*oplysPostNummer = yes[0].postnummer; //Skal rettes
+                    oplysBy = yes[0].by; //Skal rettes*/
+
+
 
                     document.getElementById("oplysFirstNavn").placeholder = oplysFirstNavn;
                     document.getElementById("oplysLastNavn").placeholder = oplysLastName;
-                    /*document.getElementById("oplysAdrasse").placeholder = oplysAdrasse;
-                    document.getElementById("oplysPostnummer").placeholder = oplysPostNummer;
-                    document.getElementById("oplysBy").placeholder = oplysBy;
+                    document.getElementById("oplysAdrasse").placeholder = oplysAdrasse;
                     document.getElementById("oplysTlf").placeholder = oplysTlf;
-                    document.getElementById("oplysEmail").placeholder = oplysEmail;*/
+                    document.getElementById("oplysEmail").placeholder = oplysEmail
+                    /*document.getElementById("oplysPostnummer").placeholder = oplysPostNummer;
+                    document.getElementById("oplysBy").placeholder = oplysBy;
+                    ;*/
                 } else {
                     alert('There was a problem with the request.');
                 }
