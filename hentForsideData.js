@@ -17,8 +17,8 @@ $(function hentForsideData() {
             if (httpRequest.status === 200) {
 
                 yes = JSON.parse(this.responseText);
-                document.getElementById("brugerNavn").innerHTML = yes[1].firstname + " " + yes[1].lastname;
-                document.getElementById("brugerSaldo").innerHTML = yes[1].account.balance + "kr.";
+                document.getElementById("brugerNavn").innerHTML = localStorage.getItem("firstname") + " " + localStorage.getItem("lastname");
+                document.getElementById("brugerSaldo").innerHTML = localStorage.getItem("balance") + "kr.";
                 document.getElementById("sidsteOrdre").innerHTML = "";
                 document.getElementById("beløbSidsteOrdre").innerHTML = "";
             } else {
