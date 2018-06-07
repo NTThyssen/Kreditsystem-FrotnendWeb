@@ -133,11 +133,18 @@ td{
     padding-right: 150px;
 }
 
+#orderContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 #orderContainer table {
     border: 1px solid #ccc;
     padding: 8px;
     border-radius: 1em;
     width: 250px;
+    margin: 0 auto;
 }
 
 #orderContainer thead, #orderContainer tbody {
