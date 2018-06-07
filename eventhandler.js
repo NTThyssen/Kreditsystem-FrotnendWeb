@@ -21,6 +21,7 @@ $(function() {
           if(document.getElementById("bruger").value ==yes[0].id){
             if(document.getElementById("pass").value== yes[0].id){
                 //alert(this.responseText);
+                fillLocalStorage();
                 $("#maincontainer").load("mainPage.html")
             }else{
               alert("invalid info")

@@ -35,19 +35,16 @@ $(function hentMineOplysningerData() {
                     oplysAdrasse = localStorage.getItem("adrasse");
                     oplysTlf = localStorage.getItem("phonenumber");
                     oplysEmail = localStorage.getItem("mail");
-                    /*oplysPostNummer = yes[0].postnummer; //Skal rettes
-                    oplysBy = yes[0].by; //Skal rettes*/
-
-
+                    oplysPostNummer = localStorage.getItem("postnummer");
+                    oplysBy = localStorage.getItem("by");
 
                     document.getElementById("oplysFirstNavn").placeholder = oplysFirstNavn;
                     document.getElementById("oplysLastNavn").placeholder = oplysLastName;
                     document.getElementById("oplysAdrasse").placeholder = oplysAdrasse;
                     document.getElementById("oplysTlf").placeholder = oplysTlf;
-                    document.getElementById("oplysEmail").placeholder = oplysEmail
-                    /*document.getElementById("oplysPostnummer").placeholder = oplysPostNummer;
+                    document.getElementById("oplysEmail").placeholder = oplysEmail;
+                    document.getElementById("oplysPostnummer").placeholder = oplysPostNummer;
                     document.getElementById("oplysBy").placeholder = oplysBy;
-                    ;*/
                 } else {
                     alert('There was a problem with the request.');
                 }
