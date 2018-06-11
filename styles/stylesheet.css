@@ -1,0 +1,228 @@
+html, body {
+    background: #F2F2F2;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+html, body, form {
+    -webkit-font-smoothing: antialiased;
+    font-family: 'open_sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif !important;
+    font-weight: 500;
+}
+
+p {
+    font-weight: 300;
+}
+
+b {
+    font-weight: 500;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 50px 20px 0;
+}
+
+label {
+    font-size: 13px;
+    margin-bottom: 4px;
+    display: inline-block;
+    margin-left: 7px;
+}
+
+input + label {
+    margin-top: 8px;
+}
+
+button {
+    font-weight: 700;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 8px;
+    border-radius: 3px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    filter: brightness(95%);
+}
+button[type="submit"] {
+    color: #FFF;
+    background-color: #2ABD8B;
+    border: none;
+    display: inline-block;
+}
+button[type="submit"]:active{
+    background-color: #00aa00;
+}
+
+form button[type="submit"] {
+  margin-top: 16px;
+}
+
+form h1 {
+    margin-bottom: 24px;
+}
+
+#title {
+    margin-bottom: 50px;
+    font-size: 30px;
+    //animation: spin 1s infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.info-item {
+    color: #555;
+    padding-left: 4px;
+    margin-bottom: 8px;
+}
+
+.info-item b {
+    color: #000;
+    margin-left: -4px;
+}
+
+.cc-fields-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px 0;
+}
+
+.cc-fields {
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+form input{
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: #FFF;
+    border: 1px solid #DDD;
+    padding: 6px;
+}
+input + input {
+    margin-top: 4px;
+}
+
+input.inputFeltudløb{
+    width: 35px;
+    margin: 0;
+}
+input.inputFeltudløb:not(:last-child) {
+  margin-right: 2px;
+}
+input.inputFeltCVS{
+    width: 40px;
+  margin: 0;
+}
+.checkbox {
+  margin-left: 0;
+}
+.checkbox input {
+  width: auto;
+}
+
+.LoginButton{
+    margin: 16px auto 0;
+}
+
+thead {
+    border-bottom: 1px solid #CCC;
+    text-align: left;
+}
+
+th {
+    padding-bottom: 8px;
+}
+
+td {
+    padding: 4px 0;
+}
+
+.nav-list {
+    list-style: none;
+    font-weight: 300;
+    margin: 8px -16px 0;
+}
+
+.nav-list li {
+    padding: 8px 16px;
+}
+
+.nav-list li:hover {
+    background: #EEE;
+    cursor: pointer;
+}
+
+.nav-list li:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+}
+
+
+table{
+    width: 100%;
+}
+
+.clickable-table td {
+    cursor: pointer;
+}
+
+.clickable-table tbody tr:hover {
+    background: #EEE;
+}
+
+#rightMainPage {
+    display: flex;
+    padding: 0 16px;
+}
+#maincontainer {
+    width: 100%;
+}
+
+.card {
+    /* Just to center the form on the page */
+    margin: 0 auto;
+    width: 200px;
+    padding: 16px;
+    background-color: #FFF;
+    border-radius: 12px;
+    //font-size: larger;
+    border: 1px solid #EEE;
+    box-sizing: border-box;
+}
+
+.card.table-card {
+    width: 500px;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.content-wrapper .navigation-wrapper {
+    z-index: 1;
+}
+
+.content-wrapper .main-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    margin-left: -200px;
+}

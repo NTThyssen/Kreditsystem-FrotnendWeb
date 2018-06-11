@@ -4,121 +4,18 @@
     <title>Login In1</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="stylesheet.css" rel="stylesheet">
+    <link href="styles/reset.css" rel="stylesheet">
+    <link href="styles/stylesheet.css" rel="stylesheet">
     <script src= "jquery-3.3.1.min.js"> </script>
-    <script src= "info.js"></script>
-    <script src="eventhandler.js"></script>
-    <script src="localStorage.js"></script>
-    <script type="text/javascript">
-        class Order {
-            constructor(data) {
-                this.date = data.date;
-                this.id = data.id;
-                this.company = data.company;
-                this.products = data.products;
-            }
-
-            get total() {
-                return this.products.reduce((reduction, product) => reduction + (product.amount * product.unitPrice) ,0)
-            }
-        }
-
-        const OrderData = [
-            {
-                date : "2018-05-06",
-                id : "1234",
-                company : "sejtFirma",
-                total : "100",
-                products: [
-                    {title: 'banana', amount: 3, unitPrice: 20},
-                    {title: 'golf club', amount: 3, unitPrice: 20},
-                    {title: 'salami', amount: 3, unitPrice: 20},
-                    {title: 'banana', amount: 3, unitPrice: 20},
-                    {title: 'golf club', amount: 3, unitPrice: 20},
-                    {title: 'salami', amount: 3, unitPrice: 20},
-                    {title: 'banana', amount: 3, unitPrice: 20},
-                    {title: 'golf club', amount: 3, unitPrice: 20},
-                    {title: 'salami', amount: 3, unitPrice: 20},
-                    {title: 'banana', amount: 3, unitPrice: 20},
-                    {title: 'golf club', amount: 3, unitPrice: 20},
-                    {title: 'salami', amount: 3, unitPrice: 20},
-                    {title: 'banana', amount: 3, unitPrice: 20},
-                    {title: 'golf club', amount: 3, unitPrice: 20},
-                    {title: 'salami', amount: 3, unitPrice: 20},
-                    {title: 'banana', amount: 3, unitPrice: 20},
-                    {title: 'golf club', amount: 3, unitPrice: 20},
-                    {title: 'salami', amount: 3, unitPrice: 20},
-                    {title: 'banana', amount: 3, unitPrice: 20},
-                    {title: 'golf club', amount: 3, unitPrice: 20},
-                    {title: 'salami', amount: 3, unitPrice: 20},
-                    {title: 'banana', amount: 3, unitPrice: 20},
-                    {title: 'golf club', amount: 3, unitPrice: 20},
-                    {title: 'salami', amount: 3, unitPrice: 20},
-                    {title: 'banana', amount: 3, unitPrice: 20},
-                    {title: 'golf club', amount: 3, unitPrice: 20},
-                    {title: 'salami', amount: 3, unitPrice: 20},
-                    {title: 'banana', amount: 3, unitPrice: 20},
-                    {title: 'golf club', amount: 3, unitPrice: 20},
-                    {title: 'salami', amount: 3, unitPrice: 20},
-                    {title: 'banana', amount: 3, unitPrice: 20},
-                    {title: 'golf club', amount: 3, unitPrice: 20},
-                    {title: 'salami', amount: 3, unitPrice: 20},
-                    {title: 'banana', amount: 3, unitPrice: 20},
-                    {title: 'golf club', amount: 3, unitPrice: 20},
-                    {title: 'salami', amount: 3, unitPrice: 20},
-                    {title: 'banana', amount: 3, unitPrice: 20},
-                    {title: 'golf club', amount: 3, unitPrice: 20},
-                    {title: 'salami', amount: 3, unitPrice: 20},
-                    {title: 'banana', amount: 3, unitPrice: 20},
-                    {title: 'golf club', amount: 3, unitPrice: 20},
-                    {title: 'salami', amount: 3, unitPrice: 20},
-                    {title: 'banana', amount: 3, unitPrice: 20},
-                    {title: 'golf club', amount: 3, unitPrice: 20},
-                    {title: 'salami', amount: 3, unitPrice: 20},
-                    {title: 'banana', amount: 3, unitPrice: 20},
-                    {title: 'golf club', amount: 3, unitPrice: 20},
-                    {title: 'salami', amount: 3, unitPrice: 20},
-                    {title: 'banana', amount: 3, unitPrice: 20},
-                    {title: 'golf club', amount: 3, unitPrice: 20},
-                    {title: 'salami', amount: 3, unitPrice: 20},
-                ]
-            }, {
-                date : "2018-05-05",
-                id : "1235",
-                company : "AndetFirma",
-                total : "200",
-                products: [
-                    {title: 'banana', amount: 3, unitPrice: 20},
-                    {title: 'golf club', amount: 3, unitPrice: 20},
-                    {title: 'salami', amount: 3, unitPrice: 20},
-                ]
-            }
-        ];
-
-        // Replace fetchData with API call isntead of using mock-up data (OrderData)
-        const getDataFromId = id => {
-            const data = OrderData.find(order => order.id === id);
-            if (!data) {
-                return null;
-            }
-            return new Order(data);
-        }
-    </script>
+    <script src= "js/helpers.js"></script>
+    <script src= "js/state.js"></script>
 </head>
-    <body id = "top-page" class = "edge">
-        <div id="maincontainer">
-            <div id="topLoginPage">
-                <h1>Kreditsystem</h1>
-            </div>
-            <div>
-                <form name="myForm" method="get" class = "ajax" id="LoginForm">
-                    <input class="inputFelt" type="text", id="bruger", placeholder="brugernavn">
-                    <input class="inputFelt" type="password", id="pass", placeholder="password">
-                </form>
-            </div>
-            <div class="LoginButton">
-                <button class="mainButton" id="getLogin" type="button">Login</button>
-            </div>
-        </div>
+    <body id="top-page" class="edge">
+        <h1 id="title"></h1>
+        <div id="maincontainer"></div>
+
+        <script>
+            state.init();
+        </script>
     </body>
 </html>
