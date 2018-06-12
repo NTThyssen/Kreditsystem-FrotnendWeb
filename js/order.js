@@ -4,21 +4,20 @@
 
     const init = () => {
         const id = $('#rightMainPage').attr('data-id');
+        console.log(id);
+        const order = state.getOrder(id);
+        
+        insertionPoint.appendChild(makeOrderDOM(order));
+        insertionPoint.appendChild(makeProductTable(order.products));
 
-        const order = getDataFromId(id);
-
-        insertionPoint.appendChild(makeOrderDOM(order))
-
-        insertionPoint.appendChild(makeProductTable(order.products))
-    };
-
+    }
     const makeOrderDOM = data => {
         const wrapper = document.createElement('div');
 
         [
             {title: 'Date', value: data.date},
             {title: 'Order Number', value: data.id},
-            {title: 'Company', value: data.company},
+            {title: 'Company', value: data.company.name},
             {title: 'Total', value: data.total},
         ].reduce((reduction, item) => {
             reduction.appendChild(
@@ -51,10 +50,23 @@
         // {title: 'banana', amount: 3, unitPrice: 20},
         const productRows = products.reduce((reduction, product) => {
 
-            const row = Object.values(product).reduce(
+           /* const row = Object.values(product).reduce(
                 (rowReduction, productAttribute) => appendTd(rowReduction, productAttribute),
                 document.createElement('tr')
-            );
+            );*/
+
+
+            const row = Object.values(product).reduce(
+                (rowReduction, productAttribute) => {
+                console.log("hallo" + productAttribute);
+                if(typeof productAttribute === 'object'){
+                    appendTd(rowReduction, productAttribute.name);
+
+                }else{
+                    appendTd(rowReduction, productAttribute)
+                }
+                return rowReduction;
+            },document.createElement('tr'));
 
             reduction.appendChild(row);
 

@@ -6,6 +6,8 @@ class StateClass {
             username: null,
             password: null,
             user: null,
+            id: null,
+            orders: null,
         };
 
         this.url = 'http://ec2-18-222-19-131.us-east-2.compute.amazonaws.com:8080/kreditsystem/api';
@@ -64,11 +66,12 @@ class StateClass {
             .then(token => {
                 this.token = token;
                 this.loginDetails = {username, password};
-
+                
                 return this.fetchCustomerData(token);
             })
             .then((user) => {
                 this.user = user;
+
             })
             .then(() => this.transitionTo('profile'));
     }
@@ -80,14 +83,30 @@ class StateClass {
                 return user;
             });
     }
+    depositMoney(amount) {
+        alert(amount);
+        return $.ajax(`${this.depositUrl}/${amount}`)
+        .then(response => {
+            console.log(response);
+            success: ()=>alert(`${amount} was inserted into the account.`);
+
+        })
+    }
     fetchCustomerOrders(){
         return $.ajax(this.orderUrl, {
             crossDomain: true,
-            method: 'POST',
-            contentType: 'application/json',
-            data: JSON.stringify({customerid: this.user.id}),
-            dataType: 'text'
-        });
+            method: 'GET',
+            //contentType: 'application/json',
+            //data: JSON.stringify({customerid: this.user.id}),
+            //dataType: 'text'
+        }).then(responseJSON => this.orders = responseJSON);
+    }
+    getOrder(id){
+        const data = this.state.orders.find(order => String(order.id) === String(id));
+        if (!data) {
+            return null;
+        }
+        return new Order(data);
     }
 
     set title(title) {
@@ -111,6 +130,15 @@ class StateClass {
         this.state.user = user;
     }
 
+    set id(id){
+        this.state.id = id;
+    }
+
+    set orders(orders){
+        this.state.orders = orders;
+        console.log(this.state.orders);
+    }
+
     get user() {
         return this.state.user;
     }
@@ -121,8 +149,13 @@ class StateClass {
     get customerUrl() {
         return `${this.url}/customer`;
     }
+
+    get depositUrl(){
+        return `$customer/${this.state.id}/account/deposit/`
+    }
     get orderUrl() {
-        return `${this.url}/order`;
+    //return `${this.url}/order/customer/${2}`
+    return `${this.url}/order/customer/${this.state.id}`;
     }
 }
 

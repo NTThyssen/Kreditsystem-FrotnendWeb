@@ -46,6 +46,10 @@ button {
     border-radius: 3px;
     font-size: 16px;
     cursor: pointer;
+    color: #FFF;
+    background-color: #2ABD8B;
+    border: none;
+    display: inline-block;
 }
 button:hover {
     filter: brightness(95%);

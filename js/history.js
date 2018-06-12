@@ -2,15 +2,15 @@
     const fillTable = (ordersFromApi) => {
         const table = document.getElementById('myTable');
 
-        //const orders = fetchCustomerOrders.map(order => new Order(order));
-        const orders = OrderData.map(order => new Order(order));
+        const orders = ordersFromApi.map(order => new Order(order));
+        //const orders = OrderData.map(order => new Order(order));
 
         const htmlToInsert = orders.reduce((tbodyReduction, listElement) => {
 
             const row = [
                 listElement.date,
                 listElement.id,
-                listElement.company,
+                listElement.company.name,
                 listElement.total
             ].reduce((reduction, item) => {
                 const td = document.createElement('td');
@@ -30,7 +30,7 @@
     };
 
     $(document).ready(() => {
-        fillTable();
-        // state.fetchCustomerOrders().then((orders) => fillTable(orders));
+        //fillTable();
+        state.fetchCustomerOrders().then((orders) => fillTable(orders));
     });
 })();
