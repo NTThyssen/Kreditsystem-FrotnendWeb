@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Indbetaling</title>
+</head>
+<body>
+    <div class="card">
+        <form>
+            <div>
+            <label class="checkbox" for="Visa">
+                <input type="radio" name="Korttype" id="Visa" value="Visa" checked>
+                Visa
+            </label>
+            </div>
+            <div>
+            <label class="checkbox" for="Mastercard">
+                <input type="radio" name="Korttype" id="Mastercard" value="Mastercard">
+                Mastercard
+            </label>
+            </div>
+            <div>
+            <label class="checkbox" for="Dogecoin">
+                <input type="radio" name="Korttype" id="Dogecoin" value="Dogecoin">
+                Dogecoin
+            </label>
+            </div>
+
+            <label for="amount">Beløb</label>
+            <input id="amount" class="inputFelt" type="text" name="" placeholder="1.234,00 kr">
+
+            <label for="cc">Kortnummer</label>
+            <input id="cc" class="inputFelt" type="text" name="name" placeholder="1234 5678 9012 3456">
+
+            <label for="name">Navn på kortholder</label>
+            <input id="name" class="inputFelt" type="text" name="name" placeholder="Bob Dylan">
+
+            <div class="cc-fields-wrapper">
+                <label for="cvs">CVS nummer</label>
+                <div class="cc-fields">
+                    <input placeholder="CVS" id="cvs" class="inputFelt inputFeltCVS" type="text" name="name">
+                </div>
+            </div>
+
+            <div class="cc-fields-wrapper">
+                <label for="expiry">Udløbsdato</label>
+                <div class="cc-fields">
+                    <input id="expiry" class="inputFelt inputFeltudløb" type="text" placeholder="MM" name="month">
+                    <input class="inputFelt inputFeltudløb" type ="text" placeholder="YY" name="year">
+                </div>
+            </div>
+
+            <button class="mainButton" type="button" id = "moneyButton" >Indbetal</button>
+        </form>
+    </div>
+    <script src="js/money.js"></script>
+    </body>
+</html>
